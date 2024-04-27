@@ -191,3 +191,28 @@ console.log(`Expected: ${expected} | Actual: ${actual}`);
 // Clean up
 cleanUp();
 // END of TEST 8
+
+// TEST 9
+// If a plane of id = 3 is not in the airport using isPlaneInTheAirport() then add the plane of id = 3 to the airport using landPlane().
+testHeader(
+  9,
+  `If a plane of id = 3 is not in the airport using isPlaneInTheAirport() then add the plane of id = 3 to the airport using landPlane().`
+);
+// Arrange
+plane3;
+plane4;
+airport.airportPlanes = [plane4];
+expected = true;
+// Act
+if (!airport.isPlaneInAirport(plane3)) {
+  airport.landPlane(plane3);
+}
+actual = airport.airportPlanes.includes(plane3);
+// Assert
+result = assertEquals(expected, actual);
+// Result
+console.log(result ? `TEST PASSED` : `TEST FAILED`);
+console.log(`Expected ${expected} | Actual: ${actual}`);
+// Clean up
+cleanUp();
+// END of TEST 9
