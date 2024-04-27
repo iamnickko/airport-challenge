@@ -1,6 +1,6 @@
 # Domain Models and Test Plan
 
-### **User Story 1 Requirements**
+<!-- ### **User Story 1 Requirements**
 
 | Object | Property | Message | Output |
 | :--- | :---: | :---: | :---: | 
@@ -8,9 +8,9 @@
 
 ### Tests:
 - [ ] Define capacity using ```setCapacity()``` and expect `capacity` to equal the integer.
----
+--- -->
 
-### **User Story 2 Requirements**
+### **User Story 1 Requirements**
 
 | Object  |     Property      |    Message    | Output |
 | :------ | :---------------: | :-----------: | :----: |
@@ -18,14 +18,14 @@
 
 
 ### Tests:
-- [ ] Change an already existing capacity with ```setCapacity()``` and expect the capacity to equal the new integer.
+- [ ] Change the default capacity of 10 with ```setCapacity()``` and expect the capacity to equal the new integer.
 ---
 
-### **User Story 3 Requirements**
+### **User Story 2 Requirements**
 
 | Object  |     Property      |    Message    | Output |
 | :------ | :---------------: | :-----------: | :----: |
-| **Airport** | `capacity` @integer <br> `airportPlanes` @Array[@Plane]| `setCapacity()` <br> `isAirportFull()` <br> `landPlane(@Plane)` | `@Void` <br> `Boolean` <br> `@Void`|
+| **Airport** | `capacity` @integer <br> `airportPlanes` @Array[@Plane] <br><br> | `setCapacity()` <br> `isAirportFull()` <br> `landPlane(@Plane)` | `@Void` <br> `Boolean` <br> `@Void`|
 | **Plane** |  |  |  |
 
 ### Tests:
@@ -34,7 +34,7 @@
 
 ---
 
-### **User Story 4 Requirements**
+### **User Story 3 Requirements**
 
 | Object | Property | Message | Output |
 | :--- | :---: | :---: | :---: |
@@ -47,7 +47,7 @@
 
 ---
 
-### **User Story 5 Requirements**
+### **User Story 4 Requirements**
 
 | Object | Property | Message | Output |
 | :--- | :---: | :---: | :---: |
