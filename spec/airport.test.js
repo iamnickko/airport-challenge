@@ -170,3 +170,24 @@ console.log(
 // Clean up
 cleanUp();
 // END of TEST 7
+
+// TEST 8
+// Check if airport actually contains a plane with id = 3 after landing plane of id = 3 using landPlane()
+testHeader(
+  8,
+  `Check if airport actually contains a plane with id = 3 after landing plane of id = 3 using landPlane()`
+);
+// Arrange
+plane3;
+expected = true;
+// Act
+airport.landPlane(plane3);
+actual = airport.airportPlanes.includes(plane3);
+// Assert
+result = assertEquals(expected, actual);
+// Result
+console.log(result ? `TEST PASSED` : `TEST FAILED`);
+console.log(`Expected: ${expected} | Actual: ${actual}`);
+// Clean up
+cleanUp();
+// END of TEST 8
