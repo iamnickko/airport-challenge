@@ -40,10 +40,10 @@
 | Object | Property | Message | Output |
 | :--- | :---: | :---: | :---: |
 | **Airport** | `capacity` @integer <br> `airportPlanes` @Array[@Plane] | - <br>`landPlane(@Plane)` | |
-| **Plane** |  | | |
+| **Plane** | `id` @integer | | |
 
 ### Tests:
-- [ ] Check if a specific plane is in the airport.
+- [x] Check if a specific plane is in the airport.
 - [ ] Check if a specific plane can be added to the airport array.
 
 ---

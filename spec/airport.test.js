@@ -126,3 +126,24 @@ console.log(
 // Clean up
 cleanUp();
 // END of TEST 5
+
+// TEST 6
+// Check if a specific plane can be added to the airport array
+testHeader(6, `Check if a specific plane can be added to the airport array.`);
+// Arrange
+plane;
+airport.airportPlanes = ["plane3"];
+expected = airport.airportPlanes.length + 1;
+// Act
+airport.landPlane(plane);
+actual = airport.airportPlanes.length;
+// Assert
+result = assertEquals(expected, actual);
+// Report
+console.log(result ? `TEST PASSED` : `TEST FAILED`);
+console.log(
+  `Airport expected planes: ${expected} | Airport actually contains: ${actual}`
+);
+// Clean up
+cleanUp();
+// END of TEST 6
