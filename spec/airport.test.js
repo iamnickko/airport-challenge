@@ -105,3 +105,6 @@ console.log(
 // Clean up
 cleanUp();
 // END of TEST 4
+
+// TEST 5
+//
