@@ -39,7 +39,7 @@
 
 | Object | Property | Message | Output |
 | :--- | :---: | :---: | :---: |
-| **Airport** | `capacity` @integer <br> `airportPlanes` @Array[@Plane] <br><br> | - <br>`landPlane(@Plane)` <br> `isPlaneInAirport()`| - <br> - <br> `@Boolean` |
+| **Airport** | `capacity` @integer <br> `airportPlanes` @Array[@Plane] <br><br> | - <br>`landPlane(@Plane)` <br> `isPlaneInAirport()` <br> `checkThenLandPlane()`| - <br> - <br> `@Boolean` <br> - |
 | **Plane** | `id` @integer | | |
 
 ### Tests:
@@ -47,7 +47,8 @@
 - [x] Check if a specific plane can be added to the airport array.
 - [x] Check if a plane with `id = 3` can be added to airport already with a plane with `id = 4`
 - [x] Check if airport actually contains plane with `id = 3` after landing plane of `id = 3` using `landPlane()`.
-- [ ] If a plane of `id = 3` is not in the airport using `isPlaneInAirport()` then add the plane of `id = 3` to the airport using `landPlane()`.
+- [x] If a plane of `id = 3` is not in the airport using `isPlaneInAirport()` then add the plane of `id = 3` to the airport using `landPlane()`.
+- [x] If a plane of `id = 4` is already in the airport using `isPlaneInAirport()` then don't add a plane to the airportPlanes array.
 
 ---
 

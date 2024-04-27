@@ -216,3 +216,28 @@ console.log(`Expected ${expected} | Actual: ${actual}`);
 // Clean up
 cleanUp();
 // END of TEST 9
+
+// Test 10
+// If a plane of id = 4 is already in the airport using isPlaneInAirport() then don't add a plane to the airportPlanes array with checkThenLandPlane().
+testHeader(
+  10,
+  `If a plane of id = 4 is already in the airport using isPlaneInAirport() then don't add a plane to the airportPlanes array with checkThenLandPlane().`
+);
+// Arrange
+airport.airportPlanes = [plane4];
+expected = airport.airportPlanes.length;
+// Act
+airport.checkThenLandPlane(plane4);
+actual = airport.airportPlanes.length;
+// Assert
+result = assertEquals(expected, actual);
+// Report
+console.log(result ? `TEST PASSED` : `TEST FAILED`);
+console.log(
+  `Expected: ${expected} | Actual: ${actual}, planes: ${JSON.stringify(
+    airport.airportPlanes
+  )}`
+);
+// Clean up
+cleanUp();
+// END of TEST 10

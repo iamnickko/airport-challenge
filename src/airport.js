@@ -15,6 +15,11 @@ const airport = {
       return true;
     }
   },
+  checkThenLandPlane: function (plane) {
+    if (!this.isPlaneInAirport(plane)) {
+      this.landPlane(plane);
+    }
+  },
 };
 
 export default airport;
