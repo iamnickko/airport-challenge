@@ -218,10 +218,10 @@ cleanUp();
 // END of TEST 9
 
 // Test 10
-// If a plane of id = 4 is already in the airport using isPlaneInAirport() then don't add a plane to the airportPlanes array with checkThenLandPlane().
+// If a plane of id = 4 is already in the airport and using checkThenLandPlane() then don't add a plane to the airportPlanes array with checkThenLandPlane().
 testHeader(
   10,
-  `If a plane of id = 4 is already in the airport using isPlaneInAirport() then don't add a plane to the airportPlanes array with checkThenLandPlane().`
+  `If a plane of id = 4 is already in the airport and using checkThenLandPlane() then don't add a plane to the airportPlanes array with checkThenLandPlane().`
 );
 // Arrange
 airport.airportPlanes = [plane4];
