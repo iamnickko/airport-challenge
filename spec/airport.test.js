@@ -266,3 +266,28 @@ console.log(
 // Clean up
 cleanUp();
 // END of Test 11
+
+// Test 12
+// Check a plane of id = 3 can be removed from the airport array using takeOff().
+testHeader(
+  12,
+  `Check a plane of id = 3 can be removed from the airport array using takeOff().`
+);
+// Arrange
+airport.airportPlanes = [plane3, plane4, plane];
+expected = airport.airportPlanes.length - 1;
+// Act
+airport.takeOff(plane3);
+actual = airport.airportPlanes.length;
+// Assert
+result = assertEquals(expected, actual);
+// Report
+console.log(result ? `TEST PASSED` : `TEST FAILED`);
+console.log(
+  `Expected: ${expected} | Actual: ${actual}, planes: ${JSON.stringify(
+    airport.airportPlanes
+  )}`
+);
+// Clean up
+cleanUp();
+// END of Test 12

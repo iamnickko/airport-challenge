@@ -20,6 +20,13 @@ const airport = {
       this.landPlane(plane);
     }
   },
+
+  takeOff: function (plane) {
+    let updatedList = this.airportPlanes.filter((current) => {
+      return current.id !== plane.id;
+    });
+    this.airportPlanes = updatedList;
+  },
 };
 
 export default airport;
