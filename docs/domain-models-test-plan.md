@@ -44,7 +44,9 @@
 
 ### Tests:
 - [x] Check if a specific plane is in the airport.
-- [ ] Check if a specific plane can be added to the airport array.
+- [x] Check if a specific plane can be added to the airport array.
+- [x] Check if a plane with `id = 3` can be added to airport already with a plane with `id = 4`
+- [ ] Check if airport actually contains plane with `id = 3` after landing plane of `id = 3` using `landPlane()`.
 
 ---
 

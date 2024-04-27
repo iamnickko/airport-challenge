@@ -1,5 +1,3 @@
-import plane from "./plane.js";
-
 const airport = {
   capacity: 10, // set to 10 airplanes by default
   airportPlanes: [], // airport is empty by default

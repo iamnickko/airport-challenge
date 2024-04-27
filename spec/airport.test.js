@@ -3,17 +3,15 @@ import {
   //   assertNotEquals,
 } from "./test-framework/test-framework.js";
 import airport from "../src/airport.js";
-import plane from "../src/plane.js";
+import { plane, plane3, plane4 } from "../src/plane.js";
 
 // TEST FUNCTIONS
-// Test headers for console.log
+// Test headers for console.log formatting
 const testHeader = (testNum, description) => {
   console.log(`===========================`);
   console.log(`Test ${testNum}:`);
   console.log(`${description}`);
-  //   console.log(``);
 };
-// Test report
 
 // Clean up function AFTER EACH test
 const cleanUp = () => {
@@ -147,3 +145,28 @@ console.log(
 // Clean up
 cleanUp();
 // END of TEST 6
+
+// TEST 7
+// Check if a plane with id = 3 can be added to airport already with a plane with id = 4
+testHeader(
+  7,
+  `Check if a plane with id = 3 can be added to airport already with a plane with id = 4`
+);
+// Arrange
+plane3;
+plane4;
+airport.airportPlanes = [plane4];
+expected = airport.airportPlanes.length + 1;
+// Act
+airport.landPlane(plane3);
+actual = airport.airportPlanes.length;
+// Assert
+result = assertEquals(expected, actual);
+// Report
+console.log(result ? `TEST PASSED` : `TEST FAILED`);
+console.log(
+  `Airport expected to contain ${expected} | Airport actually contains ${actual}`
+);
+// Clean up
+cleanUp();
+// END of TEST 7
