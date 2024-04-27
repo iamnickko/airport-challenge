@@ -3,6 +3,7 @@ import {
   //   assertNotEquals,
 } from "./test-framework/test-framework.js";
 import airport from "../src/airport.js";
+import plane from "../src/plane.js";
 
 // TEST FUNCTIONS
 // Test headers for console.log
@@ -107,4 +108,21 @@ cleanUp();
 // END of TEST 4
 
 // TEST 5
-//
+// Check if a specific plane is in the airport
+testHeader(5, `Check if a specific plane is in the airport`);
+// Arrange
+plane;
+airport.airportPlanes = [plane];
+expected = true;
+// Act
+actual = airport.isPlaneInAirport(plane);
+// Assert
+result = assertEquals(expected, actual);
+// Report
+console.log(result ? `TEST PASSED` : `TEST FAILED`);
+console.log(
+  `Plane in airport: ${airport.airportPlanes[0]}, Expected: ${expected} | Checking the plane: ${plane} Actual: ${actual}`
+);
+// Clean up
+cleanUp();
+// END of TEST 5
