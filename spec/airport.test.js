@@ -241,3 +241,28 @@ console.log(
 // Clean up
 cleanUp();
 // END of TEST 10
+
+// Test 11
+// If a plane of id = 4 is not in the airport then add to the airport using checkThenLandPlane()
+testHeader(
+  11,
+  `If a plane of id = 4 is not in the airport then add to the airport using checkThenLandPlane().`
+);
+// Arrange
+airport.airportPlanes = [plane3];
+expected = airport.airportPlanes.length + 1;
+// Act
+airport.checkThenLandPlane(plane4);
+actual = airport.airportPlanes.length;
+// Assert
+result = assertEquals(expected, actual);
+// Report
+console.log(result ? `TEST PASSED` : `TEST FAILED`);
+console.log(
+  `Expected: ${expected} | Actual: ${actual}, planes: ${JSON.stringify(
+    airport.airportPlanes
+  )}`
+);
+// Clean up
+cleanUp();
+// END of Test 11

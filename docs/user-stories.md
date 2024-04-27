@@ -1,11 +1,5 @@
 # User Stories
 
-| User Story 1||
-| ---: | --- |
-| *As an* | air traffic controller |
-| *I want to* | define the capacity of the airport | 
-| *So that* | I know the maximum number of planes that can be at the airport at any given time. |
-
 | User Story 1 | |
 | ---: | --- |
 | *As an* | air traffic controller |
