@@ -30,8 +30,8 @@
 
 ### Tests:
 - [x] Check if the airport is not full by checking airportPlanes length is less than capacity.
-- [ ] Check if a plane can be added to the airport with `landPlane()`
-- [ ] Check a plane cannot be landed if capacity is full.
+- [x] Check if a plane can be added to the airport with `landPlane()`
+- [x] Check a plane cannot be landed if capacity is full.
 
 ---
 

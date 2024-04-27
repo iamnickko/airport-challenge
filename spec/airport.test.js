@@ -40,7 +40,6 @@ result = assertEquals(expected, actual);
 // Report
 console.log(result ? `TEST PASSED` : `TEST FAILED`);
 console.log(`Expected value: ${expected} | Actual value: ${actual}`);
-console.log(`===========================`);
 // Clean up
 cleanUp();
 // END of TEST 1
@@ -62,7 +61,6 @@ console.log(!result ? `TEST PASSED` : `TEST FAILED`);
 console.log(
   `Capacity value: ${expected} | airportPlanes length value: ${actual}`
 );
-console.log(`===========================`);
 // Clean up
 cleanUp();
 // END of TEST 2
@@ -81,7 +79,29 @@ result = assertEquals(expected, actual);
 // Report
 console.log(result ? `TEST PASSED` : `TEST FAILED`);
 console.log(`Expected value: ${expected} | Actual value: ${actual}`);
-console.log(`===========================`);
 // Clean up
 cleanUp();
 // END of TEST 3
+
+// TEST 4
+// Check a plane cannot be landed if capacity is full
+testHeader(4, `Check a plane cannot be landed if capacity is full`);
+// Arrange
+airport.capacity = 1;
+plane1;
+let plane2;
+airport.airportPlanes = [plane1];
+expected = airport.airportPlanes.length;
+// Act
+airport.landPlane(plane2);
+actual = airport.airportPlanes.length;
+// Assert
+result = assertEquals(expected, actual);
+// Report
+console.log(result ? `TEST PASSED` : `TEST FAILED`);
+console.log(
+  `Capacity value: ${airport.capacity}, Expected airportPlanes: ${expected} | Actual airportPlanes: ${actual}`
+);
+// Clean up
+cleanUp();
+// END of TEST 4

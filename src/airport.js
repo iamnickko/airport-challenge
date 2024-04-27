@@ -6,7 +6,9 @@ const airport = {
     this.capacity = newCapacity;
   },
   landPlane: function (plane) {
-    this.airportPlanes.push(plane);
+    if (this.airportPlanes.length < this.capacity) {
+      this.airportPlanes.push(plane);
+    }
   },
 };
 
