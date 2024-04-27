@@ -18,7 +18,7 @@
 
 
 ### Tests:
-- [ ] Change the default capacity of 10 with ```setCapacity()``` and expect the capacity to equal the new integer.
+- [x] Change the default capacity of 10 with ```setCapacity()``` and expect the capacity to equal the new integer.
 ---
 
 ### **User Story 2 Requirements**
@@ -29,8 +29,9 @@
 | **Plane** |  |  |  |
 
 ### Tests:
-- [ ] Check if  the is not full by checking airportPlanes length doesn't equal capacity.
+- [x] Check if the airport is not full by checking airportPlanes length is less than capacity.
 - [ ] Check if a plane can be added to the airport with `landPlane()`
+- [ ] Check a plane cannot be landed if capacity is full.
 
 ---
 
