@@ -239,7 +239,7 @@ console.log(
 cleanUp();
 // END of TEST 10
 
-// Test 11
+// TEST 11
 // If a plane of id = 4 is not in the airport then add to the airport using checkThenLandPlane()
 testHeader(
   11,
@@ -262,9 +262,9 @@ console.log(
 );
 // Clean up
 cleanUp();
-// END of Test 11
+// END of TEST 11
 
-// Test 12
+// TEST 12
 // Check a plane of id = 3 can be removed from the airport array using takeOff().
 testHeader(
   12,
@@ -287,9 +287,9 @@ console.log(
 );
 // Clean up
 cleanUp();
-// END of Test 12
+// END of TEST 12
 
-// Test 13
+// TEST 13
 // Check a plane of id = 3 can be removed from the airport array if it is already at the airport using checkThenTakeOff().
 testHeader(
   13,
@@ -312,4 +312,29 @@ console.log(
 );
 // Clean up
 cleanUp();
-// END of Test 13
+// END of TEST 13
+
+// TEST 14
+// Check there is no change of airport array length if trying to remove a plane of id = 3 if it is not already in the airport.
+testHeader(
+  14,
+  `Check there is no change of airport array length if trying to remove a plane of id = 3 if it is not already in the airport.`
+);
+// Arrange
+airport.airportPlanes = [plane4, plane];
+expected = airport.airportPlanes.length;
+// Act
+airport.checkThenTakeOff(plane3);
+actual = airport.airportPlanes.length;
+// Assert
+result = assertEquals(expected, actual);
+// Report
+console.log(result ? `TEST PASSED` : `TEST FAILED`);
+console.log(
+  `Expected: ${expected} | Actual: ${actual}, planes: ${JSON.stringify(
+    airport.airportPlanes
+  )}`
+);
+// Clean up
+cleanUp();
+// END of TEST 14

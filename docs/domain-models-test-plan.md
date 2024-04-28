@@ -62,7 +62,7 @@
 
 ### Tests:
 - [x] Check a plane of `id = 3` can be removed from the airport array using `takeOff()`.
-- [ ] Check a plane of `id = 3` can be removed from the airport array if it is already at the airport using `checkThenTakeOff()`.
-- [ ] Check there is no change of airport array length if trying to remove a plane of `id = 3` if it is not already in the airport.
+- [x] Check a plane of `id = 3` can be removed from the airport array if it is already at the airport using `checkThenTakeOff()`.
+- [x] Check there is no change of airport array length if trying to remove a plane of `id = 3` if it is not already in the airport.
 
 ---
