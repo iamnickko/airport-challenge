@@ -1,7 +1,4 @@
-import {
-  assertEquals,
-  //   assertNotEquals,
-} from "./test-framework/test-framework.js";
+import { assertEquals } from "./test-framework/test-framework.js";
 import airport from "../src/airport.js";
 import { plane, plane3, plane4 } from "../src/plane.js";
 
@@ -291,3 +288,28 @@ console.log(
 // Clean up
 cleanUp();
 // END of Test 12
+
+// Test 13
+// Check a plane of id = 3 can be removed from the airport array if it is already at the airport using checkThenTakeOff().
+testHeader(
+  13,
+  `Check a plane of id = 3 can be removed from the airport array if it is already at the airport using checkThenTakeOff().`
+);
+// Arrange
+airport.airportPlanes = [plane3, plane4];
+expected = airport.airportPlanes.length - 1;
+// Act
+airport.checkThenTakeOff(plane3);
+actual = airport.airportPlanes.length;
+// Assert
+result = assertEquals(expected, actual);
+// Report
+console.log(result ? `TEST PASSED` : `TEST FAILED`);
+console.log(
+  `Expected: ${expected} | Actual: ${actual}, planes: ${JSON.stringify(
+    airport.airportPlanes
+  )}`
+);
+// Clean up
+cleanUp();
+// END of Test 13

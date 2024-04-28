@@ -27,6 +27,11 @@ const airport = {
     });
     this.airportPlanes = updatedList;
   },
+  checkThenTakeOff: function (plane) {
+    if (this.isPlaneInAirport(plane)) {
+      this.takeOff(plane);
+    }
+  },
 };
 
 export default airport;
